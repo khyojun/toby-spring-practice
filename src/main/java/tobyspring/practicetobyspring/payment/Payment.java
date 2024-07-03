@@ -35,6 +35,18 @@ public class Payment {
         this.validUntil = validUntil;
     } // 같은 종류의 타입이 나올 경우 실수를 할 수 있음. 생성자를 사용하였을 경우에
 
+    public static Payment createPrepare(Long orderId, String currency, BigDecimal foreignCurrencyAmount,
+        BigDecimal exRate) {
+
+        //금액 계산
+        BigDecimal convertedAmount = foreignCurrencyAmount.multiply(exRate);
+
+        //유효기간 계산
+        LocalDateTime validUntil = LocalDateTime.now().plusMinutes(30);
+
+        return new Payment(orderId, currency, foreignCurrencyAmount, exRate,convertedAmount,validUntil);
+    }
+
 
     public Long getOrderId() {
         return orderId;
