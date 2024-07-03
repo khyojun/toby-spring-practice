@@ -1,4 +1,4 @@
-package tobyspring.practicetobyspring;
+package tobyspring.practicetobyspring.provider;
 
 import java.io.IOException;
 import java.math.BigDecimal;

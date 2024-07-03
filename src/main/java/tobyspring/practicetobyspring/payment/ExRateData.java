@@ -1,4 +1,4 @@
-package tobyspring.practicetobyspring;
+package tobyspring.practicetobyspring.payment;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.math.BigDecimal;
