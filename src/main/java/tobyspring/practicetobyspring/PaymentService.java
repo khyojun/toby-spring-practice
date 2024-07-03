@@ -8,8 +8,8 @@ public  class PaymentService {
 
     private final ExRateProvider exRateProvider;
 
-    public PaymentService() {
-        this.exRateProvider = new SimpleExRateProvider();
+    public PaymentService(ExRateProvider exRateProvider) {
+        this.exRateProvider = exRateProvider; // 생성자 부분에서 기술에 의존적
     }
 
     public Payment prepare(Long orderId, String currency, BigDecimal foreignCurrencyAmount)
