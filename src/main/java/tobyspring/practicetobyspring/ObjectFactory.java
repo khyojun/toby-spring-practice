@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import tobyspring.practicetobyspring.payment.PaymentService;
 import tobyspring.practicetobyspring.provider.CachedExRateProvider;
-import tobyspring.practicetobyspring.provider.ExRateProvider;
+import tobyspring.practicetobyspring.payment.ExRateProvider;
 import tobyspring.practicetobyspring.provider.WebApiExRateProvider;
 
 @Configuration
